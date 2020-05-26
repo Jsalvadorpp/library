@@ -22,7 +22,7 @@
 
         <hr>
 
-        <section class='library'>
+        <section class='library' id='library'>
 
             <div class='book-card'>
                 <h3 class='title'>Harry Potter</h3>
@@ -58,14 +58,14 @@
     </main>
 
     <div class='modal-wrapper' id='modal-wrapper'>
-        <form class='book-form'> 
+        <form class='book-form' id='book-form'> 
             <h3>New Book</h3>
 
             <label class='block'>Tittle</label>
             <input type='text' name="title">
 
             <label class='block'>Author</label>
-            <input type='text' name="title">
+            <input type='text' name="author">
 
             <label class='block'>Status</label>
             <input type="radio" name="status" value="read" checked="checked">
@@ -73,11 +73,21 @@
             <input type="radio" name="status" value="unread">
             <label>Unread</label><br><br>
 
-            <button class='btn'>Add book</button>
+            <button class='btn' id='add-book'>Add book</button>
         </form>
     </div>
 
-    
+
+
+
+
+    <!-- Book Template -->
+    <div class='book-card' id='card-template'>
+        <h3 class='title'></h3>
+        <p class='author'>Author: </p>
+        <button class='btn'></button>
+    </div>
+
     <script src='scripts/library.js'></script>
 </body>
 </html>

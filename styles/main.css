@@ -34,6 +34,9 @@ body{
     display: block;
     margin: 10px 0;
 }
+#card-template{
+    display: none;
+}
 /* ************** */
 
 
@@ -124,8 +127,5 @@ main hr{
 }
 .book-form h3{
     color: var(--primary-color1);
-    
 }
-
-
 /* ************** */
