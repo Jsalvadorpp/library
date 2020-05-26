@@ -10,11 +10,72 @@
 </head>
 <body>
 
-    
+    <nav class='row'>
+        <p class='brand-name'>My<span>Library</span></p>
+    </nav>
 
+    <main>
+        <div class='row align-start-end'>
+            <h2>My collection</h2>
+            <button class='btn' id='openForm'>+ Add book</button>
+        </div>
 
+        <hr>
 
+        <section class='library'>
 
+            <div class='book-card'>
+                <h3 class='title'>Harry Potter</h3>
+                <p class='author'>Author: jose salvador </p>
+                <button class='btn'>read</button>
+            </div>
+
+            <div class='book-card'>
+                <h3 class='title'>Harry Potter</h3>
+                <p class='author'>Author: jose salvador </p>
+                <button class='btn'>read</button>
+            </div>
+
+            <div class='book-card'>
+                <h3 class='title'>Harry Potter</h3>
+                <p class='author'>Author: jose salvador </p>
+                <button class='btn unread'>unread</button>
+            </div>
+
+            <div class='book-card'>
+                <h3 class='title'>Harry Potter</h3>
+                <p class='author'>Author: jose salvador </p>
+                <button class='btn'>read</button>
+            </div>
+
+            <div class='book-card'>
+                <h3 class='title'>Harry Potter</h3>
+                <p class='author'>Author: jose salvador </p>
+                <button class='btn'>read</button>
+            </div>
+
+        </section>
+    </main>
+
+    <div class='modal-wrapper' id='modal-wrapper'>
+        <form class='book-form'> 
+            <h3>New Book</h3>
+
+            <label class='block'>Tittle</label>
+            <input type='text' name="title">
+
+            <label class='block'>Author</label>
+            <input type='text' name="title">
+
+            <label class='block'>Status</label>
+            <input type="radio" name="status" value="read" checked="checked">
+            <label>Read</label><br>
+            <input type="radio" name="status" value="unread">
+            <label>Unread</label><br><br>
+
+            <button class='btn'>Add book</button>
+        </form>
+    </div>
 
     
     <script src='scripts/library.js'></script>
