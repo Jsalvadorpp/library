@@ -82,6 +82,7 @@ main hr{
     -webkit-box-shadow: -2px 4px 8px 1px rgba(0,0,0,0.4); 
     box-shadow: -2px 4px 8px 1px rgba(0,0,0,0.4);
     border-left: 4px solid var(--primary-color1); 
+    position: relative;
 }
 .title{
     font-size: 25px;
@@ -94,6 +95,17 @@ main hr{
 }
 .unread{
     background-color: var(--primary-color2);
+}
+.close{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: var(--primary-color2);
+    transition: all 0.1s;
+}
+.close:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 /* ************** */
 

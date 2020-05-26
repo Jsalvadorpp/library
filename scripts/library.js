@@ -58,6 +58,7 @@ function addBookToLibrary(){
     let bookCard = createBookCard(book);
 
     libraryWrapper.appendChild(bookCard);
+    modalWrapper.style.display = 'none';
 }
 
 function createBookCard(book){
@@ -66,15 +67,29 @@ function createBookCard(book){
     let bookCard = template.cloneNode(true);
     bookCard.removeAttribute('id');
 
-    bookCard.children[0].textContent = book.title;
-    bookCard.children[1].textContent += book.author;
-    bookCard.children[2].textContent = book.status;
-    bookCard.children[2].classList.add(book.status);
+    bookCard.children[0].addEventListener('click',removeBook);
+    bookCard.children[1].textContent = book.title;
+    bookCard.children[2].textContent += book.author;
+    bookCard.children[3].textContent = book.status;
+    bookCard.children[3].classList.add(book.status);
 
     return bookCard;
 }
 //$ ============================================
 
 
+//$ ======== Remove book =====================
+//! remove later
+let closebtn_list = document.querySelectorAll('.close');
+
+//! remove later
+closebtn_list.forEach( (btn) => {
+    btn.addEventListener('click',removeBook);
+});
+
+function removeBook(){
+    this.parentElement.remove();
+}
+//$ ==========================================
 
 
