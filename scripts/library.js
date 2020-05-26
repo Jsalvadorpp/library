@@ -71,7 +71,9 @@ function createBookCard(book){
     bookCard.children[1].textContent = book.title;
     bookCard.children[2].textContent += book.author;
     bookCard.children[3].textContent = book.status;
+    bookCard.children[3].addEventListener('click',changeStatus);
     bookCard.children[3].classList.add(book.status);
+    bookCard.children[3].setAttribute('data-status', book.status);
 
     return bookCard;
 }
@@ -79,17 +81,20 @@ function createBookCard(book){
 
 
 //$ ======== Remove book =====================
-//! remove later
-let closebtn_list = document.querySelectorAll('.close');
-
-//! remove later
-closebtn_list.forEach( (btn) => {
-    btn.addEventListener('click',removeBook);
-});
-
 function removeBook(){
     this.parentElement.remove();
 }
 //$ ==========================================
 
+
+//$ ======== Change status ===================
+function changeStatus(){
+    let status = this.getAttribute('data-status');
+    let newStatus = (status == 'read')? 'unread':'read';
+
+    this.textContent = newStatus;
+    this.classList = (status == 'read')? 'btn unread' : 'btn';
+    this.setAttribute('data-status', newStatus);
+}
+//$ ==========================================
 
