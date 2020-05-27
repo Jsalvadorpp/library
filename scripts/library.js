@@ -11,24 +11,20 @@ openForm.addEventListener('click', ()=>{
 window.addEventListener('click',(e)=>{
     if(e.target == modalWrapper){
 
-        //-clean input 
-        let inputs = document.querySelectorAll(".book-form input[type='text']");
-        inputs.forEach( (input) => {
-            input.value = '';
-        });
+        cleanForm();
 
         //-close form
         modalWrapper.style.display = 'none';
     } 
 });
+function cleanForm(){
+    let inputs = document.querySelectorAll(".book-form input[type='text']");
+
+    inputs.forEach( (input) => {
+        input.value = '';
+    });
+}
 //$ =============================================
-
-
-//$ ======== Books collection ==================
-let myLibrary = [];
-
-
-//$ ============================================
 
 
 //$ ======== Add new book  =====================
@@ -58,6 +54,8 @@ function addBookToLibrary(){
     let bookCard = createBookCard(book);
 
     libraryWrapper.appendChild(bookCard);
+    
+    cleanForm();
     modalWrapper.style.display = 'none';
 }
 
